@@ -22,7 +22,7 @@ interface DateGlobal {
     /**
      * 一天的秒数
      */
-    const SECONDS_IN_A_DAY = 86400;
+    const SECONDS_IN_A_DAY = 86400000;
 
     /**
      * 一周的秒数
