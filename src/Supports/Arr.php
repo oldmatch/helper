@@ -42,7 +42,7 @@ class Arr
         foreach ($tree as $k => $val) {
             $array[] = $val;
             if (!empty($val[$child])) {
-                $children = self::treeToList($val[$child], $val[$id]);
+                $children = self::treeToList($val[$child], $id);
                 if ($children) {
                     $array = array_merge($array, $children);
                 }
