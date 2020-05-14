@@ -1,8 +1,8 @@
 <?php
 namespace Oldmatch\Helper\Tests;
 
-use Oldmatch\Helper\Service\ImageCompress;
 use Oldmatch\Helper\Service\RedisHelper;
+use Oldmatch\Helper\Supports\Common;
 use PHPUnit\Framework\TestCase;
 
 class ServiceTest extends TestCase
@@ -21,13 +21,9 @@ class ServiceTest extends TestCase
         $this->assertEquals($res, false);
     }
 
-    public function compressImageTest()
+    public function testCommonCurl()
     {
-        $localImagePath = '';
-        $image_compress_percent = 50;
-        $localImagePath = '';
-        // 压缩图片
-        $ImageCompress = new ImageCompress($localImagePath, $image_compress_percent);
-        $ImageCompress->compressImg($localImagePath);
+        $res = Common::curlRequest('https://baidu.com');
+        $this->assertEquals($res, false);
     }
 }
