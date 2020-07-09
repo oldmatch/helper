@@ -21,7 +21,7 @@ class Arr
         $tree = [];
         foreach ($array as $k => $v) {
             if ($v[$pid] == $root) {
-                $v[$child_name] = self::listToTree($array, $v[$id]);
+                $v[$child_name] = self::listToTree($array, $v[$id], $id, $pid, $child_name);
                 $tree[] = $v;
                 unset($array[$k]);
             }
